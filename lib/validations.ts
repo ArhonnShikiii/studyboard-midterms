@@ -22,4 +22,4 @@ export const createTaskSchema = z.object({
 export const updateTaskSchema = z.object({
     title: z.string().trim().min(1, "Title is required").max(200),
     done: z.boolean().optional(),
-});
+}).partial();

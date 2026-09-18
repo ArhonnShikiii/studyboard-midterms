@@ -35,7 +35,7 @@ export async function PATCH(
     );
   }
 
-  const updated = await updateTask(params.id, params.taskId, body);
+  const updated = await updateTask(params.id, params.taskId, parsedResponse.data);
 
   if (!updated) {
     return NextResponse.json({ error: "Task not found" }, { status: 404 });
